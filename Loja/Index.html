@@ -1,55 +1,120 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Configurações básicas da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Arquivo responsável pelo visual da página -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Título exibido na aba do navegador -->
     <title>Belas Artes - Sistema de Vendas</title>
+
 </head>
 
 <body>
+
+    <!-- =====================================================
+         CABEÇALHO
+         ===================================================== -->
 
     <header>
         <h1>Belas Artes</h1>
         <p>Sistema de Controle de Vendas</p>
     </header>
 
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+         ===================================================== -->
+
     <main>
 
+        <!-- Apresentação da área de produtos -->
         <h2>Produtos</h2>
         <p>Produtos cadastrados no sistema</p>
 
+
+        <!-- =================================================
+             LISTA DE PRODUTOS
+
+             Os produtos são criados dinamicamente
+             pelo JavaScript.
+             ================================================= -->
+
         <section class="produtos" id="lista-produtos">
+        </section>
 
-</section>
 
-<div id="mensagem"></div>
+        <!-- =================================================
+             MENSAGEM DO SISTEMA
 
-<section class="historico">
-    <h2>Histórico de Vendas</h2>
-    <div id="lista-vendas"></div>
-</section>
+             Exemplo:
+             "Venda registrada com sucesso!"
+             ================================================= -->
+
+        <div id="mensagem"></div>
+
+
+        <!-- =================================================
+             HISTÓRICO DE VENDAS
+             ================================================= -->
 
         <section class="historico">
-    <h2>Histórico de Vendas</h2>
-    <div id="lista-vendas"></div>
-</section>
-<section class="analise">
-    <h2>Análise de Vendas</h2>
 
-    <p>Total de vendas: <span id="total-vendas">0</span></p>
+            <h2>Histórico de Vendas</h2>
 
-    <p>Itens vendidos: <span id="itens-vendidos">0</span></p>
+            <!--
+                O JavaScript adicionará aqui
+                as vendas realizadas.
+            -->
 
-    <p>Faturamento: R$ <span id="faturamento">0.00</span></p>
-</section>
+            <div id="lista-vendas"></div>
+
+        </section>
+
+
+        <!-- =================================================
+             ANÁLISE DE VENDAS
+             ================================================= -->
+
+        <section class="analise">
+
+            <h2>Análise de Vendas</h2>
+
+            <!-- Quantidade de vendas realizadas -->
+            <p>
+                Total de vendas:
+                <span id="total-vendas">0</span>
+            </p>
+
+            <!-- Quantidade total de produtos vendidos -->
+            <p>
+                Itens vendidos:
+                <span id="itens-vendidos">0</span>
+            </p>
+
+            <!-- Valor total das vendas -->
+            <p>
+                Faturamento:
+                R$ <span id="faturamento">0.00</span>
+            </p>
+
+        </section>
 
     </main>
+
+
+    <!--
+        JavaScript responsável pela lógica
+        e funcionamento do sistema.
+    -->
+
     <script src="script.js"></script>
 
 </body>
 
 </html>
-```

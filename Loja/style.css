@@ -1,3 +1,8 @@
+/* =========================================================
+   CONFIGURAÇÕES GERAIS DA PÁGINA
+   ========================================================= */
+
+/* Corpo principal da página */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,21 +10,36 @@ body {
     color: #333;
 }
 
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+/* Área superior com o nome da loja e descrição */
 header {
     text-align: center;
     padding: 40px 20px;
     background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
 }
 
+/* Título principal da loja */
 header h1 {
     margin: 0;
     font-size: 40px;
 }
 
+/* Descrição abaixo do título */
 header p {
     font-size: 18px;
 }
 
+
+/* =========================================================
+   CONTEÚDO PRINCIPAL
+   ========================================================= */
+
+/* Área que contém produtos, histórico e análise */
 main {
     max-width: 1000px;
     margin: 40px auto;
@@ -27,6 +47,12 @@ main {
     text-align: center;
 }
 
+
+/* =========================================================
+   LISTA DE PRODUTOS
+   ========================================================= */
+
+/* Organiza os produtos lado a lado */
 .produtos {
     display: flex;
     justify-content: center;
@@ -34,38 +60,74 @@ main {
     flex-wrap: wrap;
 }
 
+
+/* =========================================================
+   CARD DO PRODUTO
+   ========================================================= */
+
+/* Aparência de cada produto */
 .produto {
     background-color: #ffffff;
     width: 250px;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+
+    /* Efeito utilizado apenas no card quando o mouse passa sobre ele */
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
+/* Eleva levemente o card ao passar o mouse */
 .produto:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
+
+/* =========================================================
+   INFORMAÇÕES DO PRODUTO
+   ========================================================= */
+
+/* Título do produto */
 .produto h3 {
     margin-top: 0;
+    margin-bottom: 15px;
 }
 
+/* Informações como categoria, preço e estoque */
+.produto p {
+    margin: 8px 0;
+}
+
+
+/* =========================================================
+   CAMPO DE QUANTIDADE
+   ========================================================= */
+
+/* Campo onde o usuário informa a quantidade que deseja vender */
 .produto input {
     width: 55px;
     padding: 9px;
+    margin-top: 10px;
     margin-right: 8px;
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 15px;
 }
+
+/* Aparência do campo quando está selecionado */
 .produto input:focus {
     outline: none;
     border-color: #999;
 }
 
+
+/* =========================================================
+   BOTÃO DE VENDA
+   ========================================================= */
+
+/* Botão utilizado para registrar uma venda */
 .produto button {
     padding: 10px 18px;
     border: none;
@@ -73,14 +135,29 @@ main {
     cursor: pointer;
     font-size: 15px;
     font-weight: bold;
-    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #333;
+    color: #ffffff;
 }
 
-.produto button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+
+/* =========================================================
+   MENSAGEM DO SISTEMA
+   ========================================================= */
+
+/* Mensagem exibida após uma ação, como o registro de uma venda */
+#mensagem {
+    margin: 20px 0;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
 }
 
+
+/* =========================================================
+   HISTÓRICO DE VENDAS
+   ========================================================= */
+
+/* Área que apresenta as vendas realizadas */
 .historico {
     margin-top: 40px;
     background-color: #ffffff;
@@ -88,9 +165,35 @@ main {
     border-radius: 10px;
 }
 
+
+/* =========================================================
+   ANÁLISE DE VENDAS
+   ========================================================= */
+
+/* Área responsável pelos indicadores de vendas */
 .analise {
     margin-top: 40px;
     background-color: #ffffff;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Título da seção de análise */
+.analise h2 {
+    margin-top: 0;
+}
+
+/* Indicadores da análise */
+.analise p {
+    font-size: 17px;
+    margin: 12px 0;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Valores numéricos dos indicadores */
+.analise span {
+    font-weight: bold;
+    font-size: 20px;
 }
